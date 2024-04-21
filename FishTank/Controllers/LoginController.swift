@@ -14,11 +14,6 @@ class LoginController: UIViewController {
     @IBOutlet var passwordLabel: UITextField!
     @IBOutlet var wrongCredentialsLabel: UILabel!
     
-    @State private var username = "David"
-    @State private var password = "12345"
-    @State private var wrongCredentials = 0
-    @State private var showStartScreen = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         applyBackgroundStyle()
