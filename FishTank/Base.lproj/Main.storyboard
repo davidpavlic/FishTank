@@ -53,6 +53,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="mlw-Sc-YU1" id="uC7-4d-J8d"/>
+                        <outlet property="welcomeLabel" destination="tZj-Ek-8OP" id="QqF-1t-HZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xJ-Ce-vuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

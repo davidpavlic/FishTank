@@ -9,12 +9,14 @@ import SwiftUI
 
 class LoginLoadController: UIViewController {
     
+    @IBOutlet var welcomeLabel: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         applyBackgroundStyle()
         
+        welcomeLabel.text = "WELCOME: " + (UserDefaults.standard.string(forKey: "userEmail") ?? "USER")
         activityIndicator.startAnimating()
         
         // Start a 5-second timeout before navigating

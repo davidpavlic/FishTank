@@ -51,6 +51,7 @@ class LoginController: UIViewController {
                 print(error.localizedDescription)
                 completion(false)  // Call completion with false on error
             } else {
+                UserDefaults.standard.set(result?.user.email, forKey: "userEmail")
                 completion(true)   // Call completion with true on successful login
             }
         }
