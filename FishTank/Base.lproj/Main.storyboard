@@ -17,30 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppIconStart" translatesAutoresizingMaskIntoConstraints="NO" id="p7X-5T-o3N">
-                                <rect key="frame" x="46" y="215" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIconStart" translatesAutoresizingMaskIntoConstraints="NO" id="p7X-5T-o3N">
+                                <rect key="frame" x="46.666666666666657" y="119" width="300" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="2A8-Kw-eA2"/>
+                                    <constraint firstAttribute="width" constant="300" id="2Pt-26-oWB"/>
+                                </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-Sc-YU1">
-                                <rect key="frame" x="166" y="628" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WELCOME, DAVID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZj-Ek-8OP">
-                                <rect key="frame" x="120" y="572" width="152" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WELCOME, DAVID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZj-Ek-8OP">
+                                <rect key="frame" x="136" y="504" width="121" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="LOADING..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-5J-vkv">
-                                <rect key="frame" x="120" y="713" width="152" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-Sc-YU1">
+                                <rect key="frame" x="178" y="560" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="LOADING..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-5J-vkv">
+                                <rect key="frame" x="158.66666666666666" y="632" width="76" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TID-V1-GWy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p7X-5T-o3N" firstAttribute="centerX" secondItem="oMg-2b-3l4" secondAttribute="centerX" id="0Xv-bb-92g"/>
+                            <constraint firstItem="mlw-Sc-YU1" firstAttribute="centerX" secondItem="oMg-2b-3l4" secondAttribute="centerX" id="Ba7-gU-jib"/>
+                            <constraint firstItem="Gaq-5J-vkv" firstAttribute="top" secondItem="mlw-Sc-YU1" secondAttribute="bottom" constant="35" id="R3x-7P-HxB"/>
+                            <constraint firstItem="mlw-Sc-YU1" firstAttribute="top" secondItem="tZj-Ek-8OP" secondAttribute="bottom" constant="35" id="UVR-AD-bWE"/>
+                            <constraint firstItem="tZj-Ek-8OP" firstAttribute="top" secondItem="p7X-5T-o3N" secondAttribute="bottom" constant="65" id="b6q-52-JLY"/>
+                            <constraint firstItem="p7X-5T-o3N" firstAttribute="top" secondItem="TID-V1-GWy" secondAttribute="top" constant="60" id="lRL-iZ-NPG"/>
+                            <constraint firstItem="Gaq-5J-vkv" firstAttribute="centerX" secondItem="oMg-2b-3l4" secondAttribute="centerX" id="qBw-hz-EHk"/>
+                            <constraint firstItem="tZj-Ek-8OP" firstAttribute="centerX" secondItem="oMg-2b-3l4" secondAttribute="centerX" id="uio-8s-NRo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="mlw-Sc-YU1" id="uC7-4d-J8d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xJ-Ce-vuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,19 +257,19 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0B-nr-ytv">
-                                <rect key="frame" x="105" y="503" width="183" height="34"/>
+                                <rect key="frame" x="105" y="504" width="183" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-a6-QM0">
-                                <rect key="frame" x="105" y="557" width="183" height="34"/>
+                                <rect key="frame" x="105" y="558" width="183" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-fr-KIb">
-                                <rect key="frame" x="135" y="618" width="123" height="34"/>
+                                <rect key="frame" x="135" y="619" width="123" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
@@ -264,7 +277,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSj-XZ-5g2">
-                                <rect key="frame" x="10" y="603" width="373" height="0.0"/>
+                                <rect key="frame" x="10" y="604" width="373" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -276,7 +289,7 @@
                             <constraint firstItem="SSj-XZ-5g2" firstAttribute="centerX" secondItem="loT-5y-9Wd" secondAttribute="centerX" id="1iZ-wR-eVd"/>
                             <constraint firstItem="bwb-a6-QM0" firstAttribute="leading" secondItem="eYv-xj-Bgp" secondAttribute="leading" constant="105" id="BGB-nj-kID"/>
                             <constraint firstItem="hfe-fr-KIb" firstAttribute="top" secondItem="SSj-XZ-5g2" secondAttribute="bottom" constant="15" id="GcL-a9-pyY"/>
-                            <constraint firstItem="Q0B-nr-ytv" firstAttribute="top" secondItem="Vtf-gz-ti4" secondAttribute="bottom" constant="64" id="LBX-OO-a4W"/>
+                            <constraint firstItem="Q0B-nr-ytv" firstAttribute="top" secondItem="Vtf-gz-ti4" secondAttribute="bottom" constant="65" id="LBX-OO-a4W"/>
                             <constraint firstItem="eYv-xj-Bgp" firstAttribute="trailing" secondItem="Q0B-nr-ytv" secondAttribute="trailing" constant="105" id="MAs-fN-i69"/>
                             <constraint firstItem="hfe-fr-KIb" firstAttribute="leading" secondItem="eYv-xj-Bgp" secondAttribute="leading" constant="135" id="QRx-bp-1ES"/>
                             <constraint firstItem="bwb-a6-QM0" firstAttribute="top" secondItem="Q0B-nr-ytv" secondAttribute="bottom" constant="20" id="SSJ-wg-Ou3"/>

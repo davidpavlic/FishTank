@@ -9,25 +9,23 @@ import SwiftUI
 
 class LoginLoadController: UIViewController {
     
-    var gradientLayer = CAGradientLayer()
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        applyBackgroundStyle()
         
-        gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor(red: 0.6, green: 0.85, blue: 1, alpha: 1).cgColor,
-                                UIColor.white.cgColor]
-        gradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
+        activityIndicator.startAnimating()
         
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-        
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        //startFiveSecondTimeout()
-        
-        /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "StartTabBarController") as? UITabBarController {
+        // Start a 5-second timeout before navigating
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { [weak self] _ in
+            self?.navigateToTabBarController()
+        }
+    }
+    
+    func navigateToTabBarController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "StartTabBarControllerID") as? UITabBarController {
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                let sceneDelegate = windowScene.delegate as? SceneDelegate {
                 // Set the root view controller of the window with animation
@@ -36,12 +34,7 @@ class LoginLoadController: UIViewController {
                 // Optionally animate the transition
                 UIView.transition(with: sceneDelegate.window!, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
             }
-        }*/
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        gradientLayer.frame = view.bounds
+        }
     }
     
     func startFiveSecondTimeout() {
