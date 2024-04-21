@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Load Controller-->
         <scene sceneID="ZQV-wa-lSX">
             <objects>
-                <viewController id="xJT-Zo-Tah" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginLoadControllerID" id="xJT-Zo-Tah" customClass="LoginLoadController" customModule="FishTank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oMg-2b-3l4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="166" y="628" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WELCOME, RAOUL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZj-Ek-8OP">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="WELCOME, DAVID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZj-Ek-8OP">
                                 <rect key="frame" x="120" y="572" width="152" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xJ-Ce-vuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056" y="-666"/>
+            <point key="canvasLocation" x="-840" y="4"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
@@ -210,7 +210,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ifp-m4-oTk">
             <objects>
-                <tabBarController storyboardIdentifier="StartTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="9OV-7E-deC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="StartTabBarControllerID" automaticallyAdjustsScrollViewInsets="NO" id="9OV-7E-deC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eZr-n9-8LK">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -256,24 +256,33 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-fr-KIb">
-                                <rect key="frame" x="135" y="626" width="123" height="34"/>
+                                <rect key="frame" x="135" y="618" width="123" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
                                     <action selector="login:" destination="ib3-47-UuP" eventType="touchUpInside" id="kX6-Cx-7VK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSj-XZ-5g2">
+                                <rect key="frame" x="10" y="603" width="373" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eYv-xj-Bgp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="SSj-XZ-5g2" firstAttribute="centerX" secondItem="loT-5y-9Wd" secondAttribute="centerX" id="1iZ-wR-eVd"/>
                             <constraint firstItem="bwb-a6-QM0" firstAttribute="leading" secondItem="eYv-xj-Bgp" secondAttribute="leading" constant="105" id="BGB-nj-kID"/>
+                            <constraint firstItem="hfe-fr-KIb" firstAttribute="top" secondItem="SSj-XZ-5g2" secondAttribute="bottom" constant="15" id="GcL-a9-pyY"/>
                             <constraint firstItem="Q0B-nr-ytv" firstAttribute="top" secondItem="Vtf-gz-ti4" secondAttribute="bottom" constant="64" id="LBX-OO-a4W"/>
                             <constraint firstItem="eYv-xj-Bgp" firstAttribute="trailing" secondItem="Q0B-nr-ytv" secondAttribute="trailing" constant="105" id="MAs-fN-i69"/>
                             <constraint firstItem="hfe-fr-KIb" firstAttribute="leading" secondItem="eYv-xj-Bgp" secondAttribute="leading" constant="135" id="QRx-bp-1ES"/>
                             <constraint firstItem="bwb-a6-QM0" firstAttribute="top" secondItem="Q0B-nr-ytv" secondAttribute="bottom" constant="20" id="SSJ-wg-Ou3"/>
                             <constraint firstItem="Vtf-gz-ti4" firstAttribute="top" secondItem="eYv-xj-Bgp" secondAttribute="top" constant="60" id="WH3-al-LJ2"/>
-                            <constraint firstItem="hfe-fr-KIb" firstAttribute="top" secondItem="bwb-a6-QM0" secondAttribute="bottom" constant="35" id="Ysw-Pu-zPJ"/>
+                            <constraint firstAttribute="trailing" secondItem="SSj-XZ-5g2" secondAttribute="trailing" constant="10" id="aou-7i-4GS"/>
+                            <constraint firstItem="SSj-XZ-5g2" firstAttribute="top" secondItem="bwb-a6-QM0" secondAttribute="bottom" constant="12" id="lWU-4N-k4f"/>
                             <constraint firstItem="eYv-xj-Bgp" firstAttribute="trailing" secondItem="hfe-fr-KIb" secondAttribute="trailing" constant="135" id="mYu-lQ-EJQ"/>
                             <constraint firstItem="Vtf-gz-ti4" firstAttribute="centerX" secondItem="loT-5y-9Wd" secondAttribute="centerX" id="nqO-Yq-MuD"/>
                             <constraint firstItem="Q0B-nr-ytv" firstAttribute="leading" secondItem="eYv-xj-Bgp" secondAttribute="leading" constant="105" id="q6x-BU-Oyk"/>
@@ -283,11 +292,12 @@
                     <connections>
                         <outlet property="passwordLabel" destination="bwb-a6-QM0" id="OxX-B5-Y8O"/>
                         <outlet property="userLabel" destination="Q0B-nr-ytv" id="m7e-cg-F9J"/>
+                        <outlet property="wrongCredentialsLabel" destination="SSj-XZ-5g2" id="Cxi-lc-w1y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIX-sx-GTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909.16030534351137" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-1726" y="4"/>
         </scene>
     </scenes>
     <resources>
@@ -299,6 +309,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

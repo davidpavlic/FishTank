@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D77164972BD42C550065BFEA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77164962BD42C550065BFEA /* LoginController.swift */; };
+		D77164992BD559590065BFEA /* LoginLoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77164982BD559590065BFEA /* LoginLoadController.swift */; };
 		D7D06DB72BC2BEB400C5490C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D06DB62BC2BEB400C5490C /* AppDelegate.swift */; };
 		D7D06DB92BC2BEB400C5490C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D06DB82BC2BEB400C5490C /* SceneDelegate.swift */; };
 		D7D06DBB2BC2BEB400C5490C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D06DBA2BC2BEB400C5490C /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		D77164962BD42C550065BFEA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D77164982BD559590065BFEA /* LoginLoadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoadController.swift; sourceTree = "<group>"; };
 		D7D06DB32BC2BEB400C5490C /* FishTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D06DB62BC2BEB400C5490C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7D06DB82BC2BEB400C5490C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D7D06DC12BC2BEB600C5490C /* LaunchScreen.storyboard */,
 				D7D06DC42BC2BEB600C5490C /* Info.plist */,
 				D77164962BD42C550065BFEA /* LoginController.swift */,
+				D77164982BD559590065BFEA /* LoginLoadController.swift */,
 			);
 			path = FishTank;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				D77164972BD42C550065BFEA /* LoginController.swift in Sources */,
 				D7D06DB72BC2BEB400C5490C /* AppDelegate.swift in Sources */,
 				D7D06DB92BC2BEB400C5490C /* SceneDelegate.swift in Sources */,
+				D77164992BD559590065BFEA /* LoginLoadController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
