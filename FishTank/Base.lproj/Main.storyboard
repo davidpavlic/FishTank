@@ -192,7 +192,7 @@
         <!--Item-->
         <scene sceneID="rFd-Jd-ll7">
             <objects>
-                <viewController id="5o0-Kf-RUe" customClass="ViewController" customModule="FishTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5o0-Kf-RUe" customClass="ProfileController" customModule="FishTank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SPe-cQ-BxG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,9 +201,48 @@
                                 <rect key="frame" x="60" y="69" width="273" height="100"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Profile" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qTe-Ud-xYB">
-                                <rect key="frame" x="98" y="381" width="197" height="90"/>
+                                <rect key="frame" x="98" y="235" width="197" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="60"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email-Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n71-JG-S3V">
+                                <rect key="frame" x="60" y="416" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zs1-LZ-MO0">
+                                <rect key="frame" x="60" y="445" width="273" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vorname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDA-iu-pwp">
+                                <rect key="frame" x="60" y="514" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUM-Gn-nth">
+                                <rect key="frame" x="60" y="543" width="115" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nachname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntt-Mv-wqe">
+                                <rect key="frame" x="218" y="513" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-7Z-fqN">
+                                <rect key="frame" x="218" y="542" width="115" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -216,6 +255,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="f79-tO-VT6"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="zs1-LZ-MO0" id="aaj-Ve-6bO"/>
+                        <outlet property="firstNameTextField" destination="lUM-Gn-nth" id="Oc7-FW-EFf"/>
+                        <outlet property="lastNameTextField" destination="Jky-7Z-fqN" id="DlK-IY-Fip"/>
+                        <outlet property="view" destination="SPe-cQ-BxG" id="v6u-c6-cZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6q-op-aNM" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,8 +349,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordLabel" destination="bwb-a6-QM0" id="OxX-B5-Y8O"/>
-                        <outlet property="userLabel" destination="Q0B-nr-ytv" id="m7e-cg-F9J"/>
+                        <outlet property="passwordTextField" destination="bwb-a6-QM0" id="OxX-B5-Y8O"/>
+                        <outlet property="userTextField" destination="Q0B-nr-ytv" id="m7e-cg-F9J"/>
                         <outlet property="wrongCredentialsLabel" destination="SSj-XZ-5g2" id="Cxi-lc-w1y"/>
                     </connections>
                 </viewController>

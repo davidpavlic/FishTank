@@ -11,8 +11,9 @@
 		D77164992BD559590065BFEA /* LoginLoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77164982BD559590065BFEA /* LoginLoadController.swift */; };
 		D771649B2BD5692D0065BFEA /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771649A2BD5692D0065BFEA /* UIViewController.swift */; };
 		D771649F2BD56DD00065BFEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D771649E2BD56DD00065BFEA /* FirebaseAuth */; };
-		D77164A12BD56DD00065BFEA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D77164A02BD56DD00065BFEA /* FirebaseFirestore */; };
 		D77164A32BD56F310065BFEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D77164A22BD56F310065BFEA /* GoogleService-Info.plist */; };
+		D77B637E2C3441670044EBB1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D77B637D2C3441670044EBB1 /* FirebaseFirestore */; };
+		D796DD022BDD4D34007BAC0D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796DD012BDD4D34007BAC0D /* ProfileController.swift */; };
 		D7D06DB72BC2BEB400C5490C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D06DB62BC2BEB400C5490C /* AppDelegate.swift */; };
 		D7D06DB92BC2BEB400C5490C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D06DB82BC2BEB400C5490C /* SceneDelegate.swift */; };
 		D7D06DBE2BC2BEB400C5490C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D7D06DBD2BC2BEB400C5490C /* Base */; };
@@ -45,6 +46,7 @@
 		D77164982BD559590065BFEA /* LoginLoadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoadController.swift; sourceTree = "<group>"; };
 		D771649A2BD5692D0065BFEA /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D77164A22BD56F310065BFEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D796DD012BDD4D34007BAC0D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D7D06DB32BC2BEB400C5490C /* FishTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D06DB62BC2BEB400C5490C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7D06DB82BC2BEB400C5490C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D771649F2BD56DD00065BFEA /* FirebaseAuth in Frameworks */,
-				D77164A12BD56DD00065BFEA /* FirebaseFirestore in Frameworks */,
+				D77B637E2C3441670044EBB1 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +94,16 @@
 				D77164962BD42C550065BFEA /* LoginController.swift */,
 				D77164982BD559590065BFEA /* LoginLoadController.swift */,
 				D771649A2BD5692D0065BFEA /* UIViewController.swift */,
+				D796DD012BDD4D34007BAC0D /* ProfileController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D77B637C2C3441670044EBB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D7D06DAA2BC2BEB400C5490C = {
@@ -103,6 +113,7 @@
 				D7D06DCC2BC2BEB600C5490C /* FishTankTests */,
 				D7D06DD62BC2BEB600C5490C /* FishTankUITests */,
 				D7D06DB42BC2BEB400C5490C /* Products */,
+				D77B637C2C3441670044EBB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,7 +177,7 @@
 			name = FishTank;
 			packageProductDependencies = (
 				D771649E2BD56DD00065BFEA /* FirebaseAuth */,
-				D77164A02BD56DD00065BFEA /* FirebaseFirestore */,
+				D77B637D2C3441670044EBB1 /* FirebaseFirestore */,
 			);
 			productName = FishTank;
 			productReference = D7D06DB32BC2BEB400C5490C /* FishTank.app */;
@@ -292,6 +303,7 @@
 				D7D06DB72BC2BEB400C5490C /* AppDelegate.swift in Sources */,
 				D7D06DB92BC2BEB400C5490C /* SceneDelegate.swift in Sources */,
 				D77164992BD559590065BFEA /* LoginLoadController.swift in Sources */,
+				D796DD022BDD4D34007BAC0D /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +662,7 @@
 			package = D771649D2BD56DD00065BFEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		D77164A02BD56DD00065BFEA /* FirebaseFirestore */ = {
+		D77B637D2C3441670044EBB1 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D771649D2BD56DD00065BFEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
